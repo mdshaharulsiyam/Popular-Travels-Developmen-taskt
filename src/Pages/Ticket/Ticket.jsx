@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import TicketTable from '../../Components/Ticket/TicketTable/TicketTable'
+import SelectOption from '../../Components/ui/SelectOption/SelectOption'
+import DepartureSelect from '../../Components/Ticket/DepartureSelect/DepartureSelect'
 
 const Ticket = () => {
     const [ticketData,setTicketData]=useState([])
@@ -10,6 +12,11 @@ const Ticket = () => {
     },[])
   return (
     <>
+    <div className='container mx-auto mb-32'>
+        <Suspense fallback={`loading`}>
+            <DepartureSelect/>
+        </Suspense>
+    </div>
     <TicketTable ticketData={ticketData}/>
     </>
   )

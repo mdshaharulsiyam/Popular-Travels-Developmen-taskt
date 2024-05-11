@@ -3,7 +3,7 @@ import React from 'react'
 const TicketTable = ({ ticketData }) => {
     return (
         <div className="overflow-x-auto w-full container mx-auto">
-            <table className="table table-zebra w-full">
+            <table className="min-w-[1040px] w-full">
                 {/* head */}
                 <thead className='text-left'>
                     <tr className='bg-[#E5E7EB] px-6'>
@@ -21,7 +21,7 @@ const TicketTable = ({ ticketData }) => {
                 <tbody>
                     {ticketData?.map((item, index) => {
                         return (
-                            <tr key={index} className={`${index % 2 !== 0 ? 'bg-[#E5E7EB]' : 'bg-[#F3F4F6]'}`}>
+                            <tr key={index} className={`${index % 2 !== 0 ? 'bg-[#E5E7EB] ' : 'bg-[#F3F4F6]'}`}>
                                 <td className='pl-2 py-2'>
                                     {item?.itineraries[0]?.segments[0]?.marketingCarrier} {item?.itineraries[0]?.segments[0]?.flightNumber} <br />
                                     {item?.itineraries[0]?.segments[1]?.carrierCode} {item?.itineraries[0]?.segments[0]?.aircraft}
