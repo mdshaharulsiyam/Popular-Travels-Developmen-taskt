@@ -10,7 +10,7 @@ const DepartureSelect = () => {
     }, [])
     return (
         <div>
-            <SelectOption data={departureData} placeHoler={'departure'} />
+            <SelectOption name='departure' data={departureData} placeHoler={'departure'} />
         </div>
     )
 }

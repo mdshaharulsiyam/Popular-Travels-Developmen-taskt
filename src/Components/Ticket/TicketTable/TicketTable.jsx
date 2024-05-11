@@ -24,7 +24,7 @@ const TicketTable = ({ ticketData }) => {
                             <tr key={index} className={`${index % 2 !== 0 ? 'bg-[#E5E7EB] ' : 'bg-[#F3F4F6]'}`}>
                                 <td className='pl-2 py-2'>
                                     {item?.itineraries[0]?.segments[0]?.marketingCarrier} {item?.itineraries[0]?.segments[0]?.flightNumber} <br />
-                                    {item?.itineraries[0]?.segments[1]?.carrierCode} {item?.itineraries[0]?.segments[0]?.aircraft}
+                                    {item?.itineraries[0]?.segments[1]?.carrierCode} {item?.itineraries[0]?.segments[1]?.aircraft}
                                 </td>
                                 <td className='pl-2 py-2'>
                                     {item?.itineraries[0]?.segments[0]?.aircraft} <br />
@@ -38,7 +38,7 @@ const TicketTable = ({ ticketData }) => {
                                 </td>
                                 <td className='pl-2 py-2'>
                                     {item?.itineraries[0]?.segments[0]?.departure?.iataCode}-{item?.itineraries[0]?.segments[0]?.arrival?.iataCode} <br />
-                                    {item?.itineraries[0]?.segments[1]?.departure?.iataCode}-{item?.itineraries[0]?.segments[0]?.arrival?.iataCode}
+                                    {item?.itineraries[0]?.segments[1]?.departure?.iataCode}-{item?.itineraries[0]?.segments[1]?.arrival?.iataCode}
                                 </td >
                                 <td className='pl-2 py-2'>
                                     {item?.itineraries[0]?.segments[0]?.departure?.at} <br />
