@@ -4,13 +4,13 @@ import SelectOption from '../../ui/SelectOption/SelectOption'
 const DepartureSelect = () => {
     const [departureData, setdepartureData] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/departure')
+        fetch('https://popular-travels-developmen-task.vercel.app/departure')
             .then((res) => res.json())
             .then((data) => setdepartureData(data[0]))
     }, [])
     return (
         <div>
-            <SelectOption data={departureData} placeHoler={'departure'} />
+            <SelectOption name='departure' data={departureData} placeHoler={'departure'} />
         </div>
     )
 }
