@@ -4,7 +4,7 @@ import SelectOption from '../../ui/SelectOption/SelectOption'
 const SeatOptions = () => {
     const [seatData, setSeatData] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/seat')
+        fetch('https://popular-travels-developmen-task.vercel.app/seat')
             .then((res) => res.json())
             .then((data) => setSeatData(data))
     }, [])

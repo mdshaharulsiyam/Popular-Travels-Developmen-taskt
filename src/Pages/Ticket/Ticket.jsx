@@ -11,7 +11,7 @@ const Ticket = () => {
     useEffect(() => {
         const fetchData = async () => {
             const response = await toast.promise(
-                fetch(`http://localhost:5000/ticket?departure=${filterOptions?.departure}&arrival=${filterOptions?.arrival}&Pasenger=${filterOptions?.Pasenger}&date=${filterOptions?.date}`)
+                fetch(`https://popular-travels-developmen-task.vercel.app/ticket?departure=${filterOptions?.departure}&arrival=${filterOptions?.arrival}&Pasenger=${filterOptions?.Pasenger}&date=${filterOptions?.date}`)
                     .then((res) => res.json())
                     .then((data) => setTicketData(data)),
                 {
